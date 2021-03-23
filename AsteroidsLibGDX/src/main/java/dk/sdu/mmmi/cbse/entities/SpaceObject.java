@@ -26,23 +26,12 @@ public class SpaceObject {
 		if(y < 0) y = Game.HEIGHT;
 		if(y > Game.HEIGHT) y = 0; 
 	}
-	
+
+    public float getx() {
+		return x;
+    }
+
+	public float gety() {
+		return y;
+	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
