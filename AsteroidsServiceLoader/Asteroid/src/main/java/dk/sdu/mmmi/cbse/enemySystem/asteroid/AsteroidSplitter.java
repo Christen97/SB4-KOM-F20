@@ -54,8 +54,7 @@ public class AsteroidSplitter implements IEntityProcessingService {
         float speed = (float) Math.random() * 10f + 13f;
         float radians = 3.1415f / 2 + (float) Math.random();
 
-        Entity asteroid = new Asteroid(AsteroidType.SMALL);
-        asteroid.setColor(new float[]{255f, 0f, 160f, 1f});
+        Entity asteroid = new Asteroid(SMALL);
         asteroid.add(new MovingPart(0, speed, speed, 0));
         asteroid.add(new PositionPart(x + rnd.nextInt(50), y+rnd.nextInt(50), radians));
         asteroid.add(new LifePart(2, 69));
@@ -71,7 +70,6 @@ public class AsteroidSplitter implements IEntityProcessingService {
 
         Entity asteroid = new Asteroid(AsteroidType.MEDIUM);
 
-        asteroid.setColor(new float[]{255f, 0f, 160f, 1f});
         asteroid.add(new MovingPart(0, speed, speed, 0));
         asteroid.add(new PositionPart(x + rnd.nextInt(50), y + rnd.nextInt(50), radians));
         asteroid.add(new LifePart(4, 69));
