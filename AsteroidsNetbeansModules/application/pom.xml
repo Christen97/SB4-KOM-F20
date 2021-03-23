@@ -9,17 +9,6 @@
     </parent>
 
     <artifactId>AsteroidsNetbeansModules-app</artifactId>
-    <packaging>nbm-application</packaging>
-
-    <name>AsteroidsNetbeansModules-app</name>
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <all.clusters>${project.build.directory}/${brandingToken}</all.clusters>
-        <netbeans.run.params.ide/>
-        <netbeans.run.params>${netbeans.run.params.ide} --nosplash</netbeans.run.params>
-    </properties>
-
     <dependencies>
         <!--<dependency>
             <groupId>org.netbeans.cluster</groupId>
@@ -54,17 +43,15 @@
 
         <dependency>
             <groupId>${project.groupId}</groupId>
+            <artifactId>SilentUpdate</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!--
+        <dependency>
+            <groupId>${project.groupId}</groupId>
             <artifactId>Common</artifactId>
             <version>${project.version}</version>
         </dependency>
-
-        <!--
-                <dependency>
-                    <groupId>${project.groupId}</groupId>
-                    <artifactId>SilentUpdate</artifactId>
-                    <version>${project.version}</version>
-                </dependency>
-        -->
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>Player</artifactId>
@@ -105,7 +92,19 @@
             <artifactId>CommonAsteroids</artifactId>
             <version>${project.version}</version>
         </dependency>
+        -->
     </dependencies>
+
+    <packaging>nbm-application</packaging>
+
+    <name>AsteroidsNetbeansModules-app</name>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <all.clusters>${project.build.directory}/${brandingToken}</all.clusters>
+        <netbeans.run.params.ide/>
+        <netbeans.run.params>${netbeans.run.params.ide} --nosplash</netbeans.run.params>
+    </properties>
 
     <build>
         <plugins>
